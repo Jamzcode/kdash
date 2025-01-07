@@ -1,12 +1,9 @@
 <template>
-    <h1>WEATHER COMPONENT</h1>
+  <div><h1>WEATHER COMPONENT</h1></div>
 </template>
 
-<script>
-export default {
-    name: "weather component"
-
-}
+<script setup>
+name: "weather component";
 </script>
 
 <style scoped></style>

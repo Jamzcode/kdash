@@ -5,12 +5,17 @@
     <h1 class="current-temp">{{ currentTemp }}</h1>
     <h3 class="current-condition">{{ currentCondition }}</h3>
 
+    <button @click="getDateTime">GET DATE</button>
+
     <section>
       <!-- TODO: Get Current Time -->
-      <h3 class="hour">5PM</h3>
+      <h2 class="date">Date: {{ day }}</h2>
       <!-- TODO: Get Forecast for next two days -->
       <!-- convert JSON object into array to iterate for day and High/Low for following days -->
-      <div class="hourly">40</div>
+      <h2 class="time">Time: {{ time }}</h2>
+
+      <div class="three-day-forecast">Three Day Forecast:</div>
+      <div class="hourly">40 | 40 | 40</div>
     </section>
   </div>
 </template>
@@ -25,6 +30,8 @@ export default {
       currentTemp: "",
       currentCondition: "",
       location: "",
+      day: "",
+      time: "",
     };
   },
   methods: {
@@ -35,7 +42,24 @@ export default {
       this.currentTemp = response.data.current.temp_f;
       this.currentCondition = response.data.current.condition.text;
       this.location = response.data.location.name;
-      console.log(this.currentTemp);
+    },
+    getDateTime() {
+      const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      let date = new Date();
+      this.day = weekday[date.getDay()];
+      this.time = date.toLocaleDateString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
     },
   },
 };

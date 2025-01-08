@@ -2,8 +2,11 @@
     <h1>TODO LIST COMPONENT</h1>
 </template>
 
-<script setup>
+<script>
+export default{
 name: "ToDoListComponent"
+}
+
 </script>
 
 <style scoped></style>

@@ -1,11 +1,11 @@
 <template>
-    <h1>IDOL IMAGE COMPONENT</h1>
-
+  <h1>IDOL IMAGE COMPONENT</h1>
 </template>
 
-<script setup>
-name: "IdolImageComponent"
-
+<script>
+export default {
+  name: "IdolImageComponent",
+};
 </script>
 
 <style scoped></style>

@@ -9,10 +9,15 @@ import DashView from './views/DashView.vue';
     <nav>
       <RouterLink to="/">Dash</RouterLink>
       <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/to-do-list">To-Do List</RouterLink>
     </nav>
     <RouterView />
   </header>
 
 </template>
 
-<style scoped></style>
+<style scoped>
+nav{
+  background: lightgray;
+}
+</style>

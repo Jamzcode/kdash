@@ -8,14 +8,20 @@
         <li class="item">item: 4</li>
         <li class="item">item: 5</li>
       </ol>
-      <button class="edit-list">EDIT LIST</button>
+      <button class="edit-list" @click="goToToDoList">EDIT LIST</button>
     </div>
   </section>
 </template>
 
 <script>
+import router from "@/router";
 export default {
   name: "ToDoListComponent",
+  methods: {
+    goToToDoList() {
+      this.$router.push("/to-do-list");
+    },
+  },
 };
 </script>
 

@@ -1,52 +1,27 @@
 <template>
-  <section class="input section">
-    <h3>Date: mm/dd/yyyy</h3>
-    <input
-      type="text"
-      class="item-input"
-      placeholder="Whatcha gotta do today?"
-    />
-    <button class="add-item button">Add Item To List</button>
-  </section>
+  <div class="to-do-list-view">
+    <!-- Create component for adding items to to-do-list-display. -->
+    <to-do-input-component />
 
-  <section class="calendar section">
-    <h2>Month: JAN</h2>
-    <button class="month-scroll button">prev</button>
-    <button class="month-scroll button">next</button>
-    <div class="day"></div>
-    <div class="day"></div>
-    <div class="day"></div>
-    <div class="day"></div>
-    <div class="day"></div>
-    <div class="day"></div>
-    <div class="day"></div>
-  </section>
+    <!-- Create component to render accurate calendar for month of the year. -->
+    <calendar-component />
 
-  <section class="to-do-list section">
-    <div class="list-box">
-        <div class="list-item">
-            <p >Clean dinosaur cage so dinosaur does not eat me next time I enter the room.</p>
-        </div>
-        <div class="list-item">
-            <p>Purchase Dino Peppers for dinosaur</p>
-        </div>
-        <div class="list-item">
-            <p>Buy Porsche SUV to hold dinosaur cage</p>
-        </div>
-        <div class="list-item">
-            <p>Get developer job to pay for dinosaur</p>
-        </div>
-
-        <div class="button-box">
-            <button class="edit">EDIT</button><button class="remove">REMOVE</button>
-        </div>
-    </div>
-  </section>
+    <!-- Create component that will render list of todos for display in todo view/dash view -->
+    <display-list-component />
+  </div>
 </template>
 
 <script>
+import CalendarComponent from "@/components/CalendarComponent.vue";
+import DisplayListComponent from "@/components/DisplayListComponent.vue";
+import ToDoInputComponent from "@/components/ToDoInputComponent.vue";
 export default {
   name: "ToDoListView",
+  components: {
+    ToDoInputComponent,
+    DisplayListComponent,
+    CalendarComponent,
+  },
 };
 </script>
 
@@ -72,21 +47,18 @@ body {
   height: 10px;
 }
 
-.list-box{
-    border: solid black 2px;
-    width: 300px;
-    height: 300px;
-    background: mediumslateblue;
-
+.list-box {
+  border: solid black 2px;
+  width: 300px;
+  height: 300px;
+  background: mediumslateblue;
 }
 
-.list-item{
-    border: solid black 1px;
-    height: 70px;
-    width: 200px;
-    background: lightgray;
-    overflow: auto;
+.list-item {
+  border: solid black 1px;
+  height: 70px;
+  width: 200px;
+  background: lightgray;
+  overflow: auto;
 }
-
-
 </style>

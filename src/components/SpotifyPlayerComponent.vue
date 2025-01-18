@@ -1,5 +1,5 @@
 <template>
-  <div class="player-box">
+  <div class="spotify-widget">
     <p class="component-name">Spotify Component</p>
 
     <div class="album-art"></div>
@@ -14,6 +14,11 @@ export default {
 </script>
 
 <style scoped>
+.spotify-widget {
+  border: solid black 1px;
+  background: lightgoldenrodyellow;
+}
+
 .album-art {
   width: 60px;
   height: 60px;
@@ -21,10 +26,14 @@ export default {
 }
 
 .player-box {
-  border: solid black 2px;
+  border: solid black 1px;
 }
 
 .component-name {
   color: green;
+}
+
+.album-art {
+  border: solid black 1px;
 }
 </style>

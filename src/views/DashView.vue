@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <div class="dash-board">
     <h3>DASH BOARD</h3>
     <weather-component />
     <idol-quote-component />
     <spotify-player-component />
     <idol-image-component />
-    <to-do-list-component />
+    <display-list-component />
+    <button @click="goToToDoListView">Edit List</button>
   </div>
 </template>
 
@@ -14,7 +15,7 @@ import WeatherComponent from "@/components/WeatherComponent.vue";
 import IdolQuoteComponent from "@/components/IdolQuoteComponent.vue";
 import SpotifyPlayerComponent from "@/components/SpotifyPlayerComponent.vue";
 import IdolImageComponent from "@/components/IdolImageComponent.vue";
-import ToDoListComponent from "@/components/ToDoListComponent.vue";
+import DisplayListComponent from "@/components/DisplayListComponent.vue";
 
 export default {
   name: "DashView",
@@ -23,13 +24,18 @@ export default {
     IdolImageComponent,
     IdolQuoteComponent,
     SpotifyPlayerComponent,
-    ToDoListComponent,
+    DisplayListComponent,
+  },
+  methods: {
+    goToToDoListView() {
+      this.$router.push("/to-do-list");
+    },
   },
 };
 </script>
 
 <style scoped>
-.component {
-  border: solid 2px black;
+.dash-board {
+  background: lightgrey;
 }
 </style>

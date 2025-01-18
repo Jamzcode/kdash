@@ -2,8 +2,6 @@
   <div class="current-conditions-display">
     <p class="component-name">Current conditions component</p>
     <button class="fetch-data" @click="getWeatherFromApi">FETCH WEATHER</button>
-    <button @click="getDateTime">GET DATE</button>
-    <button @click="getFiveHourForecast">GET 5 HOUR FORECAST</button>
 
     <div class="current-condition">
       <h2 class="location data">{{ location }}</h2>
@@ -50,6 +48,8 @@ export default {
       this.currentTemp = response.data.current.temp_f;
       this.currentCondition = response.data.current.condition.text;
       this.location = response.data.location.name;
+      this.getDateTime();
+      this.getFiveHourForecast();
     },
     getDateTime() {
       const weekday = [
@@ -82,22 +82,17 @@ export default {
         const result = Math.floor(averageTemp);
         this.forecastTemp.push(result);
       }
-      //Call Api to retrieve data for current day
-
-      //Create loop to iterate through hour[] objects
-
-      //Focus on 'temp_f' for each of 5 hour array
     },
   },
 };
 </script>
 
 <style scoped>
-.current-conditions-display {
-  border: solid red 2px;
-}
-
 .component-name {
   color: green;
+}
+
+.current-conditions-display {
+  border: solid black 1px;
 }
 </style>

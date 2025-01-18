@@ -22,10 +22,6 @@ export default {
 
 <style scoped>
 .weather-widget {
-  border: solid gray 2px;
-}
-
-.temp {
-  font-size: 50px;
+  background: mediumspringgreen;
 }
 </style>

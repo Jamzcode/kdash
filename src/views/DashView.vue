@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h1>DASH VIEW</h1>
-    <h3>Today's Date and Time</h3>
+    <h3>DASH BOARD</h3>
     <weather-component />
     <idol-quote-component />
     <spotify-player-component />

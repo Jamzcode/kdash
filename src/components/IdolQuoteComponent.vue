@@ -1,6 +1,10 @@
 <template>
   <div class="idol-quote-widget">
-    <h1>IDOL QUOTE COMPONENT</h1>
+    <p class="idol-quote">
+      "Cheer up baby, give it a little more. A girl shouldn't give her heart
+      away so easily"
+    </p>
+    <div class="author">-TWICE</div>
   </div>
 </template>
 

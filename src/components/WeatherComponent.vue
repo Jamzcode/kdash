@@ -4,8 +4,8 @@
     <button @click="getDateTime">GET DATE</button>
     <button @click="getFiveHourForecast">GET 5 HOUR FORECAST</button>
 
+    <!-- create current condition module to embed in weather component -->
     <div class="current-condition">
-      <h1>Current Condition</h1>
       <h2 class="location data">{{ location }}</h2>
       <h2 class="temp data">{{ currentTemp }}</h2>
       <h3 class="condition data">{{ currentCondition }}</h3>
@@ -13,7 +13,6 @@
     <section>
       <!-- TODO: Get Current Time -->
       <div class="date">
-        <h2>Date:</h2>
         <h3 class="data">{{ day }}</h3>
       </div>
 
@@ -21,11 +20,10 @@
       <!-- convert JSON object into array to iterate for day and High/Low for following days -->
 
       <div class="time">
-        <h2>Time:</h2>
         <h3 class="data">{{ time }}</h3>
       </div>
 
-      <h2 class="5-hour-forecast">5-hour forecast:</h2>
+      <p class="5-hour-forecast">5-hour forecast:</p>
 
       <div class="hourly data">{{ forecastTemp }}</div>
     </section>
@@ -100,10 +98,6 @@ export default {
 <style scoped>
 .weather-widget {
   border: solid gray 2px;
-}
-
-.data {
-  color: red;
 }
 
 .temp {

@@ -1,12 +1,17 @@
 <template>
-    <h1>IDOL COMPONENT</h1>
+  <div class="idol-quote-widget">
+    <h1>IDOL QUOTE COMPONENT</h1>
+  </div>
 </template>
 
 <script>
-export default{
-    name: "IdolQuoteComponent"
-}
-
+export default {
+  name: "IdolQuoteComponent",
+};
 </script>
 
-<style scoped></style>
+<style scoped>
+.idol-quote-widget {
+  border: solid black 1px;
+}
+</style>

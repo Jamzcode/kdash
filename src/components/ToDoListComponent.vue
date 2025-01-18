@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import router from "@/router";
 export default {
   name: "ToDoListComponent",
   methods: {
@@ -25,4 +24,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.todo-list-widget {
+  border: solid black 1px;
+}
+</style>

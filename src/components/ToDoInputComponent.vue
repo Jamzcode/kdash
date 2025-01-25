@@ -3,12 +3,9 @@
     <p class="component-name">To do input component</p>
     <section class="input section">
       <h3>Date: mm/dd/yyyy</h3>
-      <input
-        type="text"
-        class="item-input"
-        placeholder="Whatcha gotta do today?"
-      />
-      <button class="add-item button">Add Item To List</button>
+
+      <input type="text" placeholder="Whatcha got to do today?" />
+      <button @click="handleInputItem">EMIT INPUT VALUE</button>
     </section>
   </div>
 </template>
@@ -16,6 +13,14 @@
 <script>
 export default {
   name: "ToDoInputComponent",
+  data() {
+    return {};
+  },
+  methods: {
+    handleInputItem() {
+      this.$emit("send-list-item", "This is listItem from input to display!");
+    },
+  },
 };
 </script>
 

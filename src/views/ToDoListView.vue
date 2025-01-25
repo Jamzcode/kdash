@@ -1,26 +1,36 @@
 <template>
   <div class="to-do-list-view">
     <!-- Create component for adding items to to-do-list-display. -->
-    <to-do-input-component />
+    <to-do-input-component @send-list-item="handleChildInput" />
 
     <!-- Create component to render accurate calendar for month of the year. -->
     <calendar-component />
 
     <!-- Create component that will render list of todos for display in todo view/dash view -->
-    <display-list-component />
+    <display-list-component :listItem="inputValue" />
   </div>
 </template>
 
 <script>
+import ToDoInputComponent from "@/components/ToDoInputComponent.vue";
 import CalendarComponent from "@/components/CalendarComponent.vue";
 import DisplayListComponent from "@/components/DisplayListComponent.vue";
-import ToDoInputComponent from "@/components/ToDoInputComponent.vue";
 export default {
   name: "ToDoListView",
+  data() {
+    return {
+      inputValue: "",
+    };
+  },
   components: {
     ToDoInputComponent,
     DisplayListComponent,
     CalendarComponent,
+  },
+  methods: {
+    handleChildInput(payload) {
+      this.inputValue = payload;
+    },
   },
 };
 </script>

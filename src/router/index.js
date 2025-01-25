@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DashView from '@/views/DashView.vue'
-import ToDoListComponent from '@/components/ToDoListComponent.vue'
 import ToDoListView from '@/views/ToDoListView.vue'
 
 const router = createRouter({

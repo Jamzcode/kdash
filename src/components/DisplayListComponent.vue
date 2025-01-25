@@ -1,44 +1,30 @@
 <template>
-  <div class="display-list">
-    <p class="component-name">Display list component</p>
-
-    <section>
-      <div class="list-box">
-        <div class="list-item">
-          <p>
-            Clean dinosaur cage so dinosaur does not eat me next time I enter
-            the room.
-          </p>
-        </div>
-        <div class="list-item">
-          <p>Purchase Dino Peppers for dinosaur</p>
-        </div>
-        <div class="list-item">
-          <p>Buy Porsche SUV to hold dinosaur cage</p>
-        </div>
-        <div class="list-item">
-          <p>Get developer job to pay for dinosaur</p>
-        </div>
-
-        <div class="button-box">
-          <button class="edit">EDIT</button
-          ><button class="remove">REMOVE</button>
-        </div>
-      </div>
-    </section>
+  <div class="display-list-box">
+    <p class="component-name">Display list component
+      <ul class="list">
+        <li class="list-item">{{ listItem }}</li>
+      </ul></p>
   </div>
 </template>
 
 <script>
 export default {
   name: "displayListComponent",
+  props: { listItem: String },
 };
 </script>
 
 <style scoped>
-.display-list {
+.display-list-box {
   border: solid black 2px;
   background: lightcyan;
+}
+
+.list {
+  background: lightgray;
+}
+.list-item {
+  background: white;
 }
 
 .component-name {

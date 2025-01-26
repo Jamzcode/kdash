@@ -1,9 +1,9 @@
 <template>
   <div class="display-list-box">
-    <p class="component-name">Display list component
-      <ul class="list">
-        <li class="list-item">{{ listItem }}</li>
-      </ul></p>
+    <p class="component-name">Display list component</p>
+    <ul class="list">
+      <li class="list-item">{{ listItem }}</li>
+    </ul>
   </div>
 </template>
 

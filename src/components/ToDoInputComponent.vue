@@ -4,7 +4,11 @@
     <section class="input section">
       <h3>Date: mm/dd/yyyy</h3>
 
-      <input type="text" placeholder="Whatcha got to do today?" />
+      <input
+        type="text"
+        placeholder="Whatcha got to do today?"
+        id="input-box"
+      />
       <button @click="handleInputItem">EMIT INPUT VALUE</button>
     </section>
   </div>
@@ -18,7 +22,8 @@ export default {
   },
   methods: {
     handleInputItem() {
-      this.$emit("send-list-item", "This is listItem from input to display!");
+      let input = document.getElementById("input-box").value;
+      this.$emit("send-list-item", input);
     },
   },
 };
